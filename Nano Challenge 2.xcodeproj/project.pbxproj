@@ -12,6 +12,7 @@
 		156CEF7B2330EFE60077A6EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CEF792330EFE60077A6EC /* Main.storyboard */; };
 		156CEF7D2330EFE80077A6EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156CEF7C2330EFE80077A6EC /* Assets.xcassets */; };
 		156CEF802330EFE80077A6EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CEF7E2330EFE80077A6EC /* LaunchScreen.storyboard */; };
+		156CEF892330F1200077A6EC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156CEF882330F1200077A6EC /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		156CEF7C2330EFE80077A6EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156CEF7F2330EFE80077A6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		156CEF812330EFE80077A6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156CEF882330F1200077A6EC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		156CEF8A2330F1200077A6EC /* Nano Challenge 2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nano Challenge 2.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156CEF892330F1200077A6EC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				156CEF742330EFE60077A6EC /* Nano Challenge 2 */,
 				156CEF732330EFE60077A6EC /* Products */,
+				156CEF872330F1200077A6EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		156CEF742330EFE60077A6EC /* Nano Challenge 2 */ = {
 			isa = PBXGroup;
 			children = (
+				156CEF8A2330F1200077A6EC /* Nano Challenge 2.entitlements */,
 				156CEF752330EFE60077A6EC /* AppDelegate.swift */,
 				156CEF772330EFE60077A6EC /* ViewController.swift */,
 				156CEF792330EFE60077A6EC /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				156CEF812330EFE80077A6EC /* Info.plist */,
 			);
 			path = "Nano Challenge 2";
+			sourceTree = "<group>";
+		};
+		156CEF872330F1200077A6EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				156CEF882330F1200077A6EC /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,11 @@
 				TargetAttributes = {
 					156CEF712330EFE60077A6EC = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Nano Challenge 2/Nano Challenge 2.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCNKPBW66V;
 				INFOPLIST_FILE = "Nano Challenge 2/Info.plist";
@@ -300,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Nano Challenge 2/Nano Challenge 2.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCNKPBW66V;
 				INFOPLIST_FILE = "Nano Challenge 2/Info.plist";
